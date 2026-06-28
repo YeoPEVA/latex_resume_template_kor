@@ -1,0 +1,268 @@
+%-------------------------
+% Resume in Latex
+% Original Author : Sourabh Bajaj
+% Adaptation : Hyunggi Chang
+% Draft content : Changyeob Lee
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{kotex}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProject}[2]{
+  \vspace{-1pt}\item
+    \begin{minipage}[t]{0.97\textwidth}
+      \textbf{#1} \\
+      \small{#2}
+    \end{minipage}\vspace{-5pt}
+}
+
+\newcommand{\resumeTalk}[2]{
+  \vspace{-1pt}\item
+    \begin{minipage}[t]{0.97\textwidth}
+      \textbf{#1} \\
+      \textit{\small #2}
+    \end{minipage}\vspace{-5pt}
+}
+
+\newcommand{\resumeSkill}[2]{
+  \item\small{\textbf{#1}: #2}
+}
+
+\newcommand{\resumeAward}[3]{
+  \item\small{\textbf{#1} / #2 / #3 \vspace{-2pt}}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://info.yeopeva.me/}{\Large 이창엽 (Changyeob Lee)}} & Github: \href{https://github.com/YeoPEVA}{YeoPEVA} $|$ LinkedIn: \href{https://www.linkedin.com/in/changyeob-lee-yeopeva}{changyeob-lee-yeopeva} \\
+  \href{https://info.yeopeva.me/}{https://info.yeopeva.me/} & Email: \href{mailto:lcy606@naver.com}{lcy606@naver.com} \\
+  \href{https://noperfectsecurity.tistory.com/}{noperfectsecurity.tistory.com} & Phone: 010-8652-9464 $|$ KST / GMT+9
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{요약}
+  \resumeSubHeadingListStart
+    \resumeItem{보안 분석과 침해대응 절차를 함께 익혀온 정보보호 전공 학부생입니다.}
+    \resumeItem{악성코드·익스플로잇 킷 연구, CTF, 공군 정보보호병 경험을 통해 분석과 운영 관점을 넓혀왔습니다.}
+    \resumeItem{반복되는 분석·점검 업무를 도구와 자동화로 개선하는 데 관심이 있습니다.}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{교육}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {순천향대학교}{아산, 대한민국}
+      {SW융합대학 정보보호학과 전공}{2025.02 -- 현재}
+      \resumeItemListStart
+        \resumeItem{학점 3.55/4.5 (3-2 종료 기준)}
+        \resumeItem{제4기 SW프런티어 활동(순천향대학교 SW중심대학사업단, 2025.04.14 -- 2025.11.28)}
+        \resumeItem{2025 SCHU AI \& SW Festival SW 프로젝트 경진대회 대상(순천향대학교)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {금융보안원}{대한민국}
+      {금융보안아카데미 3기 / 사이버 위협 대응·분석 과정}{2025.07.08 -- 2025.11.07}
+      \resumeItemListStart
+        \resumeItem{금융권 위협 분석 및 대응 절차 학습}
+        \resumeItem{CTF 디지털포렌식 문제 중심 참여 / 최우수상 수상(금융보안원)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {대구가톨릭대학교}{경산, 대한민국}
+      {소프트웨어융합대학 컴퓨터소프트웨어학부 컴퓨터공학전공 및 사이버 보안 복수 전공}{2020.03.01 -- 2025.02.11}
+      \resumeItemListStart
+        \resumeItem{제적(편입 전 재학)}
+        \resumeItem{전체 평점 3.97/4.50, 전공 평점 4.04/4.50, 취득학점 77.0/130.0}
+        \resumeItem{2024 제22회 TOPCIT 정기평가 우수상(대구가톨릭대학교 SW중심대학사업단)}
+        \resumeItem{한-베트남 제2회 국제SW코딩 경진대회 대상(경북ICT융합산업진흥협회)}
+        \resumeItem{2024-2 창의도전학기 사례발표회 최우수팀(대구가톨릭대학교)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {한국정보기술연구원}{대한민국}
+      {차세대 보안리더 양성 프로그램 9기 / 디지털포렌식 트랙}{2020.06 -- 2021.03}
+      \resumeItemListStart
+        \resumeItem{중고거래사기방지플랫폼 제작 / TOP 14 자문단 평가 진출}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{대표 경험}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SCH 사이버보안연구센터}{순천향대학교}
+      {Member / 악성코드, 익스플로잇 킷 분석 및 연구}{2025.09 -- 현재}
+      \resumeItemListStart
+        \resumeItem{악성코드와 익스플로잇 킷 분석을 중심으로 보안 연구 활동을 수행하고 있습니다.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {HSPACE FORENSIC LAB}{대한민국}
+      {Member / HDFLAB}{2025.10 -- 현재}
+      \resumeItemListStart
+        \resumeItem{디지털 포렌식 및 침해사고대응 분야의 연구 커뮤니티 활동을 이어가고 있습니다.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {대한민국 공군}{대한민국}
+      {정보보호병 825기}{2021.04 -- 2023.01}
+      \resumeItemListStart
+        \resumeItem{정보보호 장비 관리, 관제, 정책·차단 관리 업무 수행}
+        \resumeItem{훈련 대응을 통해 보안 운영 절차 경험}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Anti-root}{영남권}
+      {팀장 및 설립자}{2017.05 -- 2023.02}
+      \resumeItemListStart
+        \resumeItem{영남권 정보보호 연구팀 설립·운영, 자체 세미나 및 프로젝트 주관}
+        \resumeItem{허니팟, USB 복구, CloudGoat, YARA, 이메일 포렌식 등 발표}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {i-Keeper}{대구가톨릭대학교}
+      {CERT팀 / DEV팀 Member}{2023.09 -- 2024.02}
+      \resumeItemListStart
+        \resumeItem{analyzeMFT 기반 MFT Parser 분석·개선, DEV팀 장비부장 활동}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{대표 프로젝트 및 활동}
+  \resumeSubHeadingListStart
+    \resumeProject
+      {IaC-Rule Set \& MCP 기반 정책 감사 도구}
+      {2025.03.03 -- 2025.12.18 / IaC Rule Set과 MCP 기반 AI로 보안 정책 감사, SBOM 및 보고서 생성을 자동화했습니다.}
+      \resumeItemListStart
+        \resumeItem{IaC 분석 파트와 2025 한국데이터사이언스학회 동계학술대회 논문 작성을 담당했습니다.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {금융보안아카데미 2025 사이버 위협 대응·분석 과정}
+      {2025.07.08 -- 2025.11.07 / 금융권 위협 분석·대응 절차를 학습하고 DFIR 중심 CTF를 수행했습니다.}
+      \resumeItemListStart
+        \resumeItem{금융보안아카데미 최우수상 수상}
+      \resumeItemListEnd
+
+    \resumeProject
+      {i-Keeper / MFT Parser 분석 및 개선 프로젝트}
+      {2023.09 -- 2024.02 / Python. analyzeMFT 기반 MFT 도구 분석, GUI 및 기능 개선을 수행했습니다.}
+      \resumeItemListStart
+        \resumeItem{기능 개선 구현 및 MFT 분석 담당}
+      \resumeItemListEnd
+
+    \resumeProject
+      {BoB - 중고거래사기방지플랫폼 구현}
+      {2020.09 -- 2020.12 / Python, PHP. 중고거래 사기 게시물 탐지 및 사용자 알림 플랫폼을 구현했습니다.}
+      \resumeItemListStart
+        \resumeItem{게시글 크롤링과 백엔드 구현 담당, 논문으로 확장}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+\section{주요 수상}
+  \resumeSubHeadingListStart
+    \resumeAward{최우수상(금융보안원장)}{금융보안아카데미 2025}{2025.11.07}
+    \resumeAward{우수상(한국주택금융공사 사장)}{제1회 영남권 사이버 공격 방어 대회 대학팀 부문}{2025.10.15}
+    \resumeAward{우수상(한국인터넷진흥원장)}{2025 제6회 호남 사이버보안 콘퍼런스 침해대응 경진대회}{2025.09.18}
+    \resumeAward{장려상(한국정보보호학회 호남지부장)}{2024 제5회 호남사이버보안컨퍼런스 대학간 침해대응/분석 경진대회}{2024.10.02}
+    \resumeAward{장려상(한국포렌식학회장)}{제8--10회 디지털 범인을 찾아라 경진대회}{2022.12.15 / 2023.12.18 / 2024.12.17}
+    \resumeAward{최우수상(공군참모총장)}{제44회 공군 정보통신 경연대회 해킹방어부문}{2022.10.26}
+    \resumeAward{장려상(한국디지털포렌식학회장)}{2020년도 한국디지털포렌식학회 디지털포렌식 챌린지}{2020.11.20}
+  \resumeSubHeadingListEnd
+
+%-----------TALKS AND PAPERS-----------------
+\section{발표 및 논문}
+  \resumeSubHeadingListStart
+    \resumeTalk{온라인 직거래 환경에서의 사기 피해에 대한 사전 예방 필요성 제언: 사기 판별 요소를 중심으로}{KCI 등재 논문, 경찰학연구 21(1), pp.249--272, 2021.03, DOI: 10.22816/polsci.2021.21.1.009}
+      \resumeItemListStart
+        \resumeItem{현장호, 이창엽, 임다연, 최원영, 이현호, 이진우}
+      \resumeItemListEnd
+    \resumeTalk{Stellar-Agent: IaC 룰셋 및 모델 컨텍스트 프로토콜(MCP)을 통합한 AI 에이전트 기반 하이브리드 DevSecOps 정책 감사 프레임워크}{2025 한국데이터사이언스학회 동계학술대회 논문집, 2025.12.18, 논문번호 0032, p.118}
+      \resumeItemListStart
+        \resumeItem{정준영, 이창엽, 이정민, 이유식}
+      \resumeItemListEnd
+    \resumeTalk{중고거래사기방지 플랫폼 제안}{한국정보보호학회 동계학술대회, 2020}
+      \resumeItemListStart
+        \resumeItem{현장호, 이창엽, 임다연, 이현호, 이진우}
+      \resumeItemListEnd
+    \resumeTalk{국내 APT 및 기업 보안 사고에 대한 고찰}{한국정보보호학회 동계학술대회, 2019}
+      \resumeItemListStart
+        \resumeItem{이창엽, 이진우, 이정훈, 노무승, 박현상}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{기술 및 관심 분야}
+  \resumeSubHeadingListStart
+    \resumeSkill{Security}{DFIR, 침해사고대응, CTI, 악성코드 분석, Windows 포렌식}
+    \resumeSkill{Engineering}{Backend, DevSecOps, AWS}
+    \resumeSkill{Languages}{Korean (Native), English (Intermediate), Japanese (Intermediate)}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------------
+\section{자격 및 취득 이력}
+  \resumeSubHeadingListStart
+    \resumeItem{AWS Certified Solutions Architect - Associate (2023.07.26 -- 2026.07.26)}
+    \resumeItem{디지털포렌식 2급 (2022.12.22 -- 2028.12.22)}
+    \resumeItem{정보기기운용기능사 (2022.10 취득)}
+    \resumeItem{리눅스마스터 2급 (2019.10 취득)}
+    \resumeItem{네트워크관리사 2급 (2016.12 -- 2026.12.12)}
+  \resumeSubHeadingListEnd
+
+\end{document}
