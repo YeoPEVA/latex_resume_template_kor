@@ -84,7 +84,10 @@
 \renewcommand{\labelitemii}{$\circ$}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+% 내용을 덜어내지 않고 페이지 수를 줄이기 위해 항목 사이 '단락 간격'만 없앱니다.
+% resumeItem 이 59개라 항목당 몇 pt 만 줄여도 한 페이지가 확보됩니다.
+% itemsep 은 건드리지 않습니다 — resumeItem 안에 이미 \vspace{-2pt} 가 있어 함께 줄이면 글자가 겹칩니다.
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=2pt,parsep=0pt,partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
@@ -93,7 +96,7 @@
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://info.yeopeva.me/}{\Large 이창엽 (Changyeob Lee)}} & Github: \href{https://github.com/YeoPEVA}{YeoPEVA} $|$ LinkedIn: \href{https://www.linkedin.com/in/changyeob-lee-yeopeva}{changyeob-lee-yeopeva} \\
   \href{https://info.yeopeva.me/}{https://info.yeopeva.me/} & Email: \href{mailto:lcy606@naver.com}{lcy606@naver.com} \\
-  \href{https://noperfectsecurity.tistory.com/}{noperfectsecurity.tistory.com} & Phone: 010-8652-9464 $|$ KST / GMT+9
+  \href{https://noperfectsecurity.tistory.com/}{noperfectsecurity.tistory.com} & KST / GMT+9
 \end{tabular*}
 
 %-----------SUMMARY-----------------
@@ -101,26 +104,15 @@
   \resumeSubHeadingListStart
     \resumeItem{CERT, 침해사고 대응, 보안 관제 직무를 목표로 보안 운영, 디지털 포렌식, 악성코드 분석, 보안 자동화 경험을 쌓아온 정보보호 전공 지원자입니다.}
     \resumeItem{공군 정보보호병으로 실운영 보안 환경에서 정보보호 장비 관리, 보안 관제, 보안 정책 및 차단 관리, 훈련 대응 업무를 수행하며 보안 운영 절차와 상황 공유 흐름을 경험했습니다.}
-    \resumeItem{DFIR·침해대응 경진대회와 연구 활동을 통해 Windows Artifact, MFT, Registry, Prefetch, Event Log 기반 사고 타임라인 재구성, 증거 분석, 보고서 작성 경험을 쌓았습니다.}
+    \resumeItem{디지털 포렌식·침해대응 경진대회와 연구 활동을 통해 Windows Artifact, MFT, Registry, Prefetch, Event Log 기반 사고 타임라인 재구성, 증거 분석, 보고서 작성 경험을 쌓았습니다.}
     \resumeItem{악성코드와 익스플로잇 킷 분석 활동을 통해 파일 구조, 실행 흐름, 네트워크 행위, IoC 정리, YARA 룰 작성 관점의 분석 역량을 키웠습니다.}
     \resumeItem{MFT Parser 개선과 Stellar-Agent 프로젝트를 통해 분석 도구 개선, IaC 보안 정책 감사, SBOM 및 보고서 생성 자동화 경험을 보유하고 있습니다.}
-    \resumeItem{부산소프트웨어마이스터고 산학겸임교사로 정보보호관리 교과목을 담당하며 보안 지식을 교육 내용으로 구조화하고 전달하는 경험을 쌓고 있습니다.}
+    \resumeItem{부산소프트웨어마이스터고에서 2023년부터 전공동아리 멘토로 활동하고 있으며, 2026년에는 산학겸임교사로 정보보호관리 교과목을 담당하며 보안 지식을 교육 내용으로 구조화하고 전달하는 경험을 쌓았습니다.}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{주요 경험}
   \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {부산소프트웨어마이스터고}
-      {부산, 대한민국}
-      {산학겸임교사 / 정보보호관리 교과목 담당}
-      {2026.03.09 -- 2026.07.16}
-      \resumeItemListStart
-        \resumeItem{부산소프트웨어마이스터고에서 산학겸임교사로 정보보호관리 교과목을 담당하고 있습니다.}
-        \resumeItem{정보보호관리 교과 내용을 학생들이 이해할 수 있는 수업 흐름으로 구조화하고, 보안 운영과 관리 관점의 개념을 교육 현장에 맞게 전달하고 있습니다.}
-        \resumeItem{이 활동을 통해 보안 지식을 설명 가능한 형태로 정리하는 역량과 교육 및 커뮤니케이션 역량을 함께 쌓고 있습니다.}
-      \resumeItemListEnd
 
     \resumeSubheading
       {HSPACE FORENSIC LAB}
@@ -143,10 +135,22 @@
       \resumeItemListEnd
 
     \resumeSubheading
+      {부산소프트웨어마이스터고}
+      {부산, 대한민국}
+      {전공동아리 멘토 / 산학겸임교사 · 정보보호관리 교과목 담당}
+      {2023.04 -- 현재}
+      \resumeItemListStart
+        \resumeItem{2023 -- 2026학년도 전공동아리 멘토로 연속 임명되어 학생 프로젝트를 지도하고 있으며, 2025.11.27 전공동아리 프로젝트 최종 발표회에서 12개 작품을 심사했습니다.}
+        \resumeItem{2026.03.09 -- 2026.07.16 산학겸임교사로 정보보호관리 교과목을 담당했습니다.}
+        \resumeItem{정보보호관리 교과 내용을 학생들이 이해할 수 있는 수업 흐름으로 구조화하고, 보안 운영과 관리 관점의 개념을 교육 현장에 맞게 전달했습니다.}
+        \resumeItem{이 활동을 통해 보안 지식을 설명 가능한 형태로 정리하는 역량과 교육 및 커뮤니케이션 역량을 함께 쌓았습니다.}
+      \resumeItemListEnd
+
+    \resumeSubheading
       {i-Keeper}
       {대구가톨릭대학교}
       {CERT팀 / DEV팀 Member}
-      {2023.09 -- 2024.02}
+      {2023.09 -- 2024.07}
       \resumeItemListStart
         \resumeItem{analyzeMFT 기반 MFT Parser 분석 및 개선 프로젝트를 수행했습니다.}
         \resumeItem{Windows 파일시스템 아티팩트 분석 관점에서 MFT 구조와 파싱 결과를 검토하고, 분석 결과 확인 편의성을 높이는 방향으로 도구 개선에 참여했습니다.}
@@ -194,7 +198,7 @@
       {Stellar-Agent / IaC-Rule Set \& MCP 기반 정책 감사 도구}
       {2025.03.03 -- 2025.12.18 / IaC Rule Set, MCP 기반 AI, 보안 정책 감사, SBOM 및 보고서 생성 자동화}
       \resumeItemListStart
-        \resumeItem{IaC 분석 파트와 2025 한국데이터사이언스학회 동계학술대회 논문 작성에 참여했습니다.}
+        \resumeItem{IaC 분석 파트와 2025 한국데이터사이언스학회 동계 종합학술대회 논문 작성에 참여했습니다.}
         \resumeItem{IaC Rule Set을 기준으로 보안 정책 위반 가능성을 점검하는 감사 흐름 구현에 참여했습니다.}
         \resumeItem{MCP 기반 AI를 활용해 감사 결과를 해석하고 보고서 형태로 정리하는 기능 구현에 기여했으며, SBOM 및 분석 보고서 생성 흐름을 구성하여 반복 점검 결과를 문서화 가능한 형태로 구조화했습니다.}
       \resumeItemListEnd
@@ -210,13 +214,13 @@
       \resumeItemListEnd
 
     \resumeProject
-      {DFIR·침해대응 경진대회 분석 경험}
-      {2022 -- 2025 / 디지털 증거 분석, 사고 타임라인 재구성, 분석 보고서 작성}
+      {디지털 포렌식 · 침해대응 경진대회 분석 경험}
+      {2022.12 -- 2025.12 / 디지털 증거 분석, 사고 타임라인 재구성, 분석 보고서 작성}
       \resumeItemListStart
-        \resumeItem{DFIR·침해대응 경진대회에 지속적으로 참여하며 로그, 파일 아티팩트, 시스템 이벤트를 기반으로 침해사고 흐름을 분석했습니다.}
+        \resumeItem{디지털 포렌식·침해대응 경진대회에 지속적으로 참여하며 로그, 파일 아티팩트, 시스템 이벤트를 기반으로 침해사고 흐름을 분석했습니다.}
         \resumeItem{MFT, Registry, Prefetch, Event Log 등 복수 아티팩트를 교차 검증하여 공격자의 유입 경로, 실행 흔적, 내부 행위, 피해 범위를 추정했습니다.}
         \resumeItem{분석 결과는 사고 개요, 주요 증거, 타임라인, 원인 추정, 영향 범위, 후속 확인 항목 중심의 보고서로 정리했습니다.}
-        \resumeItem{2025 제6회 호남 사이버보안 콘퍼런스 침해대응 경진대회 우수상, 2024 제5회 호남사이버보안컨퍼런스 대학간 침해대응/분석 경진대회 장려상, 제8--10회 디지털 범인을 찾아라 경진대회 장려상을 수상했습니다.}
+        \resumeItem{2025 제6회 호남 사이버보안 콘퍼런스 침해대응 경진대회 우수상, 2024 제5회 호남사이버보안컨퍼런스 대학간 침해대응/분석 경진대회 장려상, 제8--11회 디지털 범인을 찾아라 경진대회 장려상(4회 연속)을 수상했습니다.}
       \resumeItemListEnd
 
     \resumeProject
@@ -242,25 +246,25 @@
 %-----------SKILLS-----------------
 \section{기술 및 관심 분야}
   \resumeSubHeadingListStart
-    \resumeSkill{DFIR / Incident Response}{Windows Artifact, MFT, Registry, Prefetch, Event Log, Timeline Analysis, IoC 정리, 분석 보고서 작성}
-    \resumeSkill{Malware Analysis}{YARA, 정적 분석, 동적 분석, PE 구조 분석, 파일·레지스트리·프로세스·네트워크 행위 분석}
-    \resumeSkill{Security Operation}{보안 장비 관리, 보안 관제, 보안 정책 관리, 차단 정책 관리, 훈련 대응, 상황 전파, 인수인계 문서화}
-    \resumeSkill{Engineering / Automation}{Python, Backend, DevSecOps, IaC Rule Set, MCP 기반 AI, SBOM, 보고서 생성 자동화}
-    \resumeSkill{Cloud / Infra}{AWS, OpenStack, CloudGoat 학습 경험}
+    \resumeSkill{디지털 포렌식 · 침해대응 (DFIR)}{Windows Artifact(MFT, Registry, Prefetch, Event Log), 타임라인 재구성, 침해사고 분석, 분석 보고서 작성}
+    \resumeSkill{악성코드 분석 · 탐지 룰}{정적·동적 분석, PE 구조 분석, 파일·레지스트리·프로세스·네트워크 행위 분석, IoC 정리, YARA}
+    \resumeSkill{보안 운영}{보안 관제, 보안 장비 관리, 정책·차단 관리, 훈련 대응, 상황 전파, 인수인계 문서화}
+    \resumeSkill{엔지니어링}{Python, Backend, DevSecOps, IaC Rule Set, MCP 기반 AI, SBOM, 보고서 생성 자동화, AWS, OpenStack}
+    \resumeSkill{관심 분야}{CTI, DevSecOps, 백엔드}
   \resumeSubHeadingListEnd
 
 %-----------AWARDS-----------------
 \section{수상 및 성과}
   \resumeSubHeadingListStart
+    \resumeAward{장려상(한국포렌식학회장)}{제8--11회 디지털 범인을 찾아라 경진대회 (4회 연속)}{2022.12.15 / 2023.12.18 / 2024.12.17 / 2025.12.16}
     \resumeAward{최우수상(금융보안원장)}{금융보안아카데미 2025}{2025.11.07}
+    \resumeAward{대상(순천향대학교 SW중심대학사업단장)}{2025 SCHU AI \& SW Festival SW 프로젝트 경진대회}{2025.11.05}
     \resumeAward{우수상(한국주택금융공사 사장)}{제1회 영남권 사이버 공격 방어 대회 대학팀 부문}{2025.10.15}
     \resumeAward{우수상(한국인터넷진흥원장)}{2025 제6회 호남 사이버보안 콘퍼런스 침해대응 경진대회}{2025.09.18}
-    \resumeAward{대상}{2025 SCHU AI \& SW Festival SW 프로젝트 경진대회}{2025}
-    \resumeAward{장려상(한국포렌식학회장)}{제8--10회 디지털 범인을 찾아라 경진대회}{2022.12.15 / 2023.12.18 / 2024.12.17}
+    \resumeAward{최우수팀(대구가톨릭대학교 대학일자리플러스센터장)}{2024-2 창의도전학기 사례발표회}{2024.12.05}
+    \resumeAward{우수상(대구가톨릭대학교 SW중심대학사업단장)}{2024 제22회 TOPCIT 정기평가}{2024.11.11}
     \resumeAward{장려상(한국정보보호학회 호남지부장)}{2024 제5회 호남사이버보안컨퍼런스 대학간 침해대응/분석 경진대회}{2024.10.02}
-    \resumeAward{우수상}{2024 제22회 TOPCIT 정기평가}{2024}
-    \resumeAward{대상}{한-베트남 제2회 국제SW코딩 경진대회}{2024}
-    \resumeAward{최우수팀}{2024-2 창의도전학기 사례발표회}{2024}
+    \resumeAward{대상(경북ICT융합산업진흥협회)}{한-베트남 제2회 국제SW코딩 경진대회}{2024.06.18}
     \resumeAward{최우수상(공군참모총장)}{제44회 공군 정보통신 경연대회 해킹방어부문}{2022.10.26}
     \resumeAward{장려상(한국디지털포렌식학회장)}{2020년도 한국디지털포렌식학회 디지털포렌식 챌린지}{2020.11.20}
   \resumeSubHeadingListEnd
@@ -270,7 +274,7 @@
   \resumeSubHeadingListStart
     \resumeTalk
       {Stellar-Agent: IaC 룰셋 및 모델 컨텍스트 프로토콜(MCP)을 통합한 AI 에이전트 기반 하이브리드 DevSecOps 정책 감사 프레임워크}
-      {2025 한국데이터사이언스학회 동계학술대회 논문집, 2025.12.18, 논문번호 0032, p.118}
+      {2025 한국데이터사이언스학회 동계 종합학술대회 논문집, 2025.12.18, 논문번호 0032, p.118}
       \resumeItemListStart
         \resumeItem{정준영, 이창엽, 이정민, 이유식}
         \resumeItem{IaC 분석 파트와 논문 작성에 참여했습니다.}
@@ -298,14 +302,30 @@
         \resumeItem{이창엽, 이진우, 이정훈, 노무승, 박현상}
         \resumeItem{국내 APT 및 기업 보안 사고 사례를 조사하고 보안 사고 대응 관점에서 시사점을 정리했습니다.}
       \resumeItemListEnd
+
+    \resumeTalk
+      {카드 해킹의 문제점과 대비방안}
+      {한국정보보호학회 동계학술대회, 2018}
+      \resumeItemListStart
+        \resumeItem{이진우, 이정훈, 이창엽, 노무승, 오현수}
+      \resumeItemListEnd
+
+    \resumeTalk
+      {RFID Skimming 해킹 기법에 관한 고찰}
+      {한국정보보호학회 동계학술대회, 2017}
+      \resumeItemListStart
+        \resumeItem{김건우, 김태현, 성유원, 여상준, 이진우, 이창엽, 이달원}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------CERTIFICATIONS-----------------
 \section{자격 및 취득 이력}
   \resumeSubHeadingListStart
-    \resumeItem{AWS Certified Solutions Architect - Associate (2023.07.26 -- 2026.07.26)}
+    \resumeItem{AWS Certified Solutions Architect - Associate (2023.07.26 -- 2026.07.26, 만료)}
     \resumeItem{디지털포렌식 2급 (2022.12.22 -- 2028.12.22)}
     \resumeItem{정보기기운용기능사 (2022.10 취득)}
+    \resumeItem{Exterro ACE / AccessData (2022.01.11 -- 2024.01.11, 만료)}
+    \resumeItem{인터넷정보관리사 2급 (2020.10 취득)}
     \resumeItem{리눅스마스터 2급 (2019.10 취득)}
     \resumeItem{네트워크관리사 2급 (2016.12 -- 2026.12.12)}
   \resumeSubHeadingListEnd

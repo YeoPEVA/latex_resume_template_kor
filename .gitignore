@@ -1,2 +1,11 @@
 # files
 .DS_Store
+
+# LaTeX 빌드 부산물
+*.aux
+*.out
+*.log
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
