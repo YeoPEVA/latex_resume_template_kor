@@ -13,14 +13,16 @@ updater/
 │   ├── resume_dfir_ko.tex
 │   ├── resume_dfir_en.tex
 │   ├── resume_cert_ko.tex
-│   └── resume_cert_en.tex
+│   ├── resume_cert_en.tex
+│   └── resume_threat_analyst_ko.tex
 └── pdf/
     ├── resume_ko.pdf
     ├── resume_en.pdf
     ├── resume_dfir_ko.pdf
     ├── resume_dfir_en.pdf
     ├── resume_cert_ko.pdf
-    └── resume_cert_en.pdf
+    ├── resume_cert_en.pdf
+    └── resume_threat_analyst_ko.pdf
 ```
 
 ## File Roles
@@ -36,6 +38,7 @@ updater/
 - `resume_dfir_en`: DFIR/디지털포렌식 직무용 영문 이력서
 - `resume_cert_ko`: CERT/침해대응/보안운영 직무용 한국어 이력서
 - `resume_cert_en`: CERT/침해대응/보안운영 직무용 영문 이력서
+- `resume_threat_analyst_ko`: 보안 위협 분석가 지원용 **2쪽 요약본** (1쪽: 졸업예정·대표 분석 사례 3건·공군 / 2쪽: 개발 기여·수상·논문·자격). 전체 이력은 위 6종에 그대로 두고 여기서만 덜어 냅니다. 사례 문구는 6종·경력기술서와 같은 사실 표현을 유지합니다.
 
 ## Recommended Update Flow
 
