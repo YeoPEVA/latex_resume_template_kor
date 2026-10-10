@@ -193,8 +193,15 @@
   \resumeSubHeadingListStart
 
     \resumeProject
+      {악성코드 분석 및 YARA 룰 작성 경험}
+      {2025.09 -- 현재 / 악성코드 샘플 분석, IoC 정리, YARA 룰 작성, 분석 보고서 작성}
+      \resumeItemListStart
+        \resumeItem{악성코드 샘플에 대해 정적·동적 분석을 수행하며 파일 구조와 행위 기반 흔적을 확인했습니다.}
+      \resumeItemListEnd
+
+    \resumeProject
       {Stellar-Agent / IaC-Rule Set \& MCP 기반 정책 감사 도구}
-      {2025.03.03 -- 2025.12.18 / IaC Rule Set, MCP 기반 AI, 보안 정책 감사, SBOM 및 보고서 생성 자동화}
+      {2025.03.03 -- 2025.12.18 / 팀 프로젝트 · IaC Rule Set, MCP 기반 AI, 보안 정책 감사, SBOM 및 보고서 생성 자동화}
       \resumeItemListStart
         \resumeItem{팀은 IaC Rule Set 기반 정책 점검, Checkov·KICS·Trivy 스캐너, MCP 기반 AI 에이전트를 묶어 감사 결과 해석과 SBOM·보고서 생성을 자동화했습니다.}
         \resumeItem{IaC 파트를 맡아 IaC 파일을 SBOM으로 바꾸는 도구의 CloudFormation 파서(문법 검증, !Ref·!GetAtt·!Sub 태그 처리, 변수 추출)를 구현하고 스캐너 연동 일부에 참여했으며, 학술대회 논문을 공저했습니다.}
@@ -222,7 +229,7 @@
       {i-Keeper / MFT Parser 분석 및 개선 프로젝트}
       {2023.09 -- 2024.02 / Python, analyzeMFT 기반 MFT 도구 분석, GUI 및 기능 개선}
       \resumeItemListStart
-        \resumeItem{analyzeMFT 기반 MFT Parser의 구조와 파싱 결과를 검토했습니다.}
+        \resumeItem{analyzeMFT 기반 MFT Parser의 구조를 정리하고, SI/FN 타임스탬프를 대조해 출력 해석을 검토했습니다.}
         \resumeItem{CLI 전용이던 도구에 PyQt GUI를 구현하고 JSON 출력의 예외 처리를 보강해, MFT 분석 결과 확인과 파일시스템 기반 타임라인 재구성을 보조하도록 했습니다.}
       \resumeItemListEnd
 
@@ -230,16 +237,9 @@
       {BoB - 중고거래사기방지플랫폼 구현}
       {2020.09 -- 2020.12 / Python, PHP, 중고거래 사기 게시물 탐지 및 사용자 알림 플랫폼 구현}
       \resumeItemListStart
-        \resumeItem{크롤러 3사·백엔드·ELK 구축을 담당했고, Elasticsearch 동기화는 go-mysql-elasticsearch로 구성했습니다.}
+        \resumeItem{게시물 수집·백엔드·ELK 구축을 담당했고, Elasticsearch 동기화는 go-mysql-elasticsearch로 구성했습니다.}
         \resumeItem{팀이 사기로 확인한 매물 101건에서 패턴을 뽑았고, 평균 $-2\sigma$ 밖 가격은 후보로만 쓰고 다른 요소와 점수로 합산해 판별했습니다.}
         \resumeItem{결과를 KCI 등재 논문과 한국정보보호학회 동계학술대회 발표로 확장했고, BoB 9기 디지털포렌식 트랙 TOP 14 자문단 평가까지 진출했습니다.}
-      \resumeItemListEnd
-
-    \resumeProject
-      {악성코드 분석 및 YARA 룰 작성 경험}
-      {2025.09 -- 현재 / 악성코드 샘플 분석, IoC 정리, YARA 룰 작성, 분석 보고서 작성}
-      \resumeItemListStart
-        \resumeItem{악성코드 샘플에 대해 정적·동적 분석을 수행하며 파일 구조와 행위 기반 흔적을 확인했습니다.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -250,7 +250,7 @@
     \resumeSkill{디지털 포렌식 · 침해대응 (DFIR)}{Windows·Linux 아티팩트 분석, 네트워크 포렌식, 타임라인 재구성, 침해사고 분석, 분석 보고서 작성}
     \resumeSkill{악성코드 분석 · 탐지 룰}{정적·동적 분석, PE 구조 분석, 파일·레지스트리·프로세스·네트워크 행위 분석, IoC 정리, YARA}
     \resumeSkill{보안 운영}{보안 관제, 보안 장비 관리, 정책·차단 관리, 훈련 대응, 상황 전파, 인수인계 문서화}
-    \resumeSkill{엔지니어링}{Python, Backend, DevSecOps, IaC Rule Set, MCP 기반 AI, SBOM, 보고서 생성 자동화, OpenStack}
+    \resumeSkill{엔지니어링}{Python, Backend, DevSecOps, IaC Rule Set, MCP 기반 AI, SBOM, OpenStack}
     \resumeSkill{관심 분야}{CTI, DevSecOps, 백엔드}
   \resumeSubHeadingListEnd
 
