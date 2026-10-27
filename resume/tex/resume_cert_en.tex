@@ -1,98 +1,9 @@
-%-------------------------
-% Resume in Latex
-% Original Author : Sourabh Bajaj
-% Adaptation : Hyunggi Chang
-% Draft content : Changyeob Lee
-% License : MIT
-%------------------------
-
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{amsmath}
-\usepackage{kotex}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
-
-\newcommand{\resumeItem}[1]{
-  \item\small{{#1 \vspace{-2pt}}}
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeProject}[2]{
-  \vspace{-1pt}\item
-    \begin{minipage}[t]{0.97\textwidth}
-      \textbf{#1} \\
-      \small{#2}
-    \end{minipage}\vspace{-5pt}
-}
-
-\newcommand{\resumeTalk}[2]{
-  \vspace{-1pt}\item
-    \begin{minipage}[t]{0.97\textwidth}
-      \textbf{#1} \\
-      \textit{\small #2}
-    \end{minipage}\vspace{-5pt}
-}
-
-\newcommand{\resumeSkill}[2]{
-  \item\small{\textbf{#1}: #2}
-}
-
-\newcommand{\resumeAward}[3]{
-  \item\small{\textbf{#1} / #2 / #3 \vspace{-2pt}}
-}
-
-\renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+% Resume for CERT and SOC (security monitoring and incident response operations) roles. Shared layout and sections live in common/.
+\input{common/preamble}
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://info.yeopeva.me/}{\Large Changyeob Lee}} & Github: \href{https://github.com/YeoPEVA}{YeoPEVA} $|$ LinkedIn: \href{https://www.linkedin.com/in/changyeob-lee-yeopeva}{changyeob-lee-yeopeva} \\
-  \href{https://info.yeopeva.me/}{https://info.yeopeva.me/} & Email: \href{mailto:lcy606@naver.com}{lcy606@naver.com} \\
-  \href{https://noperfectsecurity.tistory.com/}{noperfectsecurity.tistory.com} & KST / GMT+9
-\end{tabular*}
+\input{common/en/heading}
 
 %-----------SUMMARY-----------------
 \section{Summary}
@@ -102,80 +13,81 @@
     \resumeItem{Interested in automating repeated security checks and policy audits in real environments.}
   \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------------
-\section{Education}
+%-----------SKILLS-----------------
+\section{Skills}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Soonchunhyang University}{Asan, South Korea}
-      {B.S. candidate, Department of Information Security (expected Feb. 2027)}{Feb. 2025 -- Feb. 2027}
+    \resumeSkill{Security Operations}{Security monitoring, device management, policy and blocking rules, exercise response}
+    \resumeSkill{DFIR}{Windows and Linux forensics, network forensics (Wireshark, PCAP), timeline reconstruction, incident analysis}
+    \resumeSkill{Malware Analysis}{Static and dynamic analysis, PE structure analysis / IDA Pro, OllyDbg, x64dbg, Detect It Easy}
+    \resumeSkill{Detection Rules \& Threat Intelligence}{YARA / VirusTotal, ANY.RUN, Shodan, MITRE ATT\&CK}
+    \resumeSkill{Engineering}{Python (analysis and collection automation), Backend, DevSecOps, IaC}
+    \resumeSkill{Languages}{Korean (Native), English (Intermediate), Japanese (Intermediate)}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Selected Projects and Activities}
+  \resumeSubHeadingListStart
+    \resumeProject
+      {Malware Analysis \& YARA Rule Writing · SCH Cyber Security Research Center}
+      {Sep. 2025 -- Present / Analyzing ransomware and infostealer samples and researching detection rules and automation.}
       \resumeItemListStart
-        \resumeItem{GPA: 3.73/4.5 (after senior spring semester)}
-        \resumeItem{4th SW Frontier, SCH SW-Centered University Project Group (Apr. 14, 2025 -- Nov. 28, 2025)}
-        \resumeItem{Grand Prize, 2025 SCHU AI \& SW Festival SW Project Competition (Soonchunhyang University) / Stellar-Agent project}
+        \resumeItem{Check PE structure, imports, strings, and obfuscation, then follow the execution flow; record findings as IoCs and YARA rules.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Financial Security Institute}{South Korea}
-      {Financial Security Academy, 3rd Cohort}{Jul. 8, 2025 -- Nov. 7, 2025}
+    \resumeProject
+      {Stellar-Agent · IaC-Rule Set \& MCP-Based Policy Audit Tool}
+      {Mar. 3, 2025 -- Dec. 18, 2025 / Team project automating policy audits with IaC rule sets, MCP-based AI, SBOM, and reports; won the Grand Prize at the 2025 SCHU AI \& SW Festival and co-authored the conference paper.}
       \resumeItemListStart
-        \resumeItem{Cyber Threat Response and Analysis Program}
-        \resumeItem{Studied financial-sector response procedures / Top Excellence Award (Financial Security Institute)}
+        \resumeItem{Owned the IaC part: implemented the CloudFormation parser (syntax validation, intrinsic tags, variable extraction) for the IaC-to-SBOM tool and contributed to part of the scanner integration.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Daegu Catholic University}{Gyeongsan, South Korea}
-      {Computer Engineering major; Cyber Security double major}{Mar. 1, 2020 -- Feb. 11, 2025}
+    \resumeProject
+      {Digital Forensics and Incident Response Competitions}
+      {Dec. 2022 -- Dec. 2025 / Cross-validated disk images and logs to trace attacker execution and persistence and rebuild timelines.}
       \resumeItemListStart
-        \resumeItem{College of Software Convergence, School of Computer Software}
-        \resumeItem{Withdrawn before transfer}
-        \resumeItem{Overall GPA: 3.97/4.50; Major GPA: 4.04/4.50; Credits earned: 77.0/130.0}
-        \resumeItem{Excellence Award, 22nd TOPCIT Regular Evaluation 2024 (Daegu Catholic University SW-Centered University Project Group)}
-        \resumeItem{Grand Prize, 2nd Korea-Vietnam International SW Coding Competition (Gyeongbuk ICT Convergence Industry Promotion Association)}
-        \resumeItem{Best Team, 2024-2 Creative Challenge Semester Case Presentation (Daegu Catholic University)}
+        \resumeItem{Owned web server image analysis at HCCC 2025, matching eight command-bearing requests in the access log against the web shell code and confirming a root cron entry (a persistence setting) that ran a suspected backdoor file at boot and every hour.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Korea Information Technology Research Institute}{South Korea}
-      {Best of the Best, 9th Cohort / Digital Forensics Track}{Jul. 2020 -- Mar. 2021}
+    \resumeProject
+      {Financial Security Academy 2025 Cyber Threat Response and Analysis Program}
+      {Jul. 8, 2025 -- Nov. 7, 2025 / Studied financial-sector threat response and solved DFIR-focused CTFs; won the program-wide Top Excellence Award (Financial Security Institute President) as a team.}
       \resumeItemListStart
-        \resumeItem{Built a used-goods fraud prevention platform; advanced to TOP 14 advisory board evaluation}
+        \resumeItem{Competed in seven contests as a team, including three international CTFs; owned the forensics track at the White Hat Contest qualifier and personally solved two challenges, including recovering a hidden message from a PCAP; the team placed 4th in the university division and advanced to the finals.}
       \resumeItemListEnd
+
+    \resumeProject
+      {i-Keeper / MFT Parser Improvement}
+      {Sep. 2023 -- Feb. 2024 / Python. Built a PyQt GUI for the CLI-only analyzeMFT-based tool and hardened JSON exception handling.}
+
+    \resumeProject
+      {BoB - Used-Goods Fraud Prevention Platform}
+      {Sep. 2020 -- Dec. 2020 / Team project · Python, PHP. Owned listing collection from three marketplaces and the MySQL and ELK setup; the results were extended into a KCI-indexed paper.}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Selected Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {HSPACE FORENSIC LAB}{South Korea}
-      {Member / HDFLAB}{Oct. 2025 -- Present}
+      {Republic of Korea Air Force}{South Korea}
+      {Cyber Security Soldier, 825th intake}{Apr. 2021 -- Jan. 2023}
       \resumeItemListStart
-        \resumeItem{Participating in a DFIR-oriented forensic research community.}
-        \resumeItem{Solve the problem sets released each half-year and write them up as reports.}
+        \resumeItem{Managed security devices, security monitoring, and security policies and blocking rules in a live operational environment.}
+        \resumeItem{Checked security events and device status, and reviewed the scope and potential impact of policy and blocking requests.}
+        \resumeItem{Shared operational issues with the people responsible and followed up with reports, took part in exercise response, and documented recurring issues in handover materials and operating guides.}
       \resumeItemListEnd
 
     \resumeSubheading
       {SCH Cyber Security Research Center}{Soonchunhyang University}
       {Member / Malware and exploit kit analysis research}{Sep. 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Conducting security research centered on malware and exploit kit analysis.}
-        \resumeItem{Focus on ransomware and infostealers, and research automation of malware analysis and collection.}
+        \resumeItem{Research on malware and exploit kit analysis.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Busan Software Meister High School}{Busan, South Korea}
-      {Club Mentor / Adjunct Teacher, Information Security Management}{Apr. 2023 -- Present}
+      {HSPACE FORENSIC LAB}{South Korea}
+      {Member / HDFLAB}{Oct. 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Appointed as a major-club mentor for four consecutive school years (2023--2026), advising student projects.}
-        \resumeItem{Taught the Information Security Management course as an adjunct teacher (Mar. -- Jul. 2026).}
-        \resumeItem{Mentored teams --- Maru (2023--2024), Solbit (2025), Dasom (2026).}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {i-Keeper}{DCU}
-      {CERT / DEV Member}{Sep. 2023 -- Jul. 2024}
-      \resumeItemListStart
-        \resumeItem{CERT (Sep. 2023 -- Feb. 2024): Analyzed and improved an analyzeMFT-based MFT parser.}
-        \resumeItem{DEV (Mar. -- Jul. 2024): Managed team equipment and supported development.}
+        \resumeItem{Solve the DFIR problem sets released each half-year and write analysis reports.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -187,120 +99,27 @@
       \resumeItemListEnd
 
     \resumeSubheading
-      {Republic of Korea Air Force}{South Korea}
-      {Cyber Security Soldier, 825th intake}{Apr. 2021 -- Jan. 2023}
+      {Busan Software Meister High School}{Busan, South Korea}
+      {Club Mentor / Adjunct Teacher, Information Security Management}{Apr. 2023 -- Present}
       \resumeItemListStart
-        \resumeItem{Managed security devices, monitoring, policies, and blocking rules.}
-        \resumeItem{Supported security exercises and operational response procedures.}
+        \resumeItem{Appointed as a major-club mentor for four consecutive school years (2023--2026), advising student projects.}
+        \resumeItem{Taught the Information Security Management course as an adjunct teacher (Mar. -- Jul. 2026).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {i-Keeper}{DCU}
+      {CERT / DEV Member}{Sep. 2023 -- Jul. 2024}
+      \resumeItemListStart
+        \resumeItem{Analyzed and improved an MFT parser on the CERT team and served as equipment manager on the DEV team.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-\section{Selected Projects and Activities}
-  \resumeSubHeadingListStart
-    \resumeProject
-      {IaC-Rule Set \& MCP-Based Policy Audit Tool}
-      {Mar. 3, 2025 -- Dec. 18, 2025 / Team project automating security policy audits with IaC rule sets, MCP-based AI, SBOM, and reports.}
-      \resumeItemListStart
-        \resumeItem{Owned the IaC part: implemented the CloudFormation parser (syntax validation, intrinsic tags, variable extraction) for the IaC-to-SBOM tool and contributed to part of the scanner integration; co-authored the conference paper.}
-      \resumeItemListEnd
+\input{common/en/awards}
 
-    \resumeProject
-      {Financial Security Academy 2025 Cyber Threat Response and Analysis Program}
-      {Jul. 8, 2025 -- Nov. 7, 2025 / Studied financial-sector response procedures and solved DFIR-focused CTF challenges.}
-      \resumeItemListStart
-        \resumeItem{Received the program-wide Top Excellence Award as a team. Competed in seven contests as a team, including three international CTFs; owned the forensics track at the White Hat Contest qualifier and personally solved two challenges, including recovering a hidden message from a PCAP; the team placed 4th in the university division and advanced to the finals.}
-      \resumeItemListEnd
+\input{common/en/education}
 
-    \resumeProject
-      {Digital Forensics and Incident Response Competitions}
-      {Dec. 2022 -- Dec. 2025 / Traced execution and persistence artifacts in disk and log images, and organized them into timelines.}
-      \resumeItemListStart
-        \resumeItem{Owned web server image analysis at HCCC 2025, matching eight command-bearing requests in the access log against the web shell code and confirming a root cron entry.}
-      \resumeItemListEnd
+\input{common/en/papers}
 
-    \resumeProject
-      {i-Keeper / MFT Parser Improvement Project}
-      {Sep. 2023 -- Feb. 2024 / Python. Improved GUI and analysis features for an analyzeMFT-based tool.}
-      \resumeItemListStart
-        \resumeItem{Built a PyQt GUI for the CLI-only analyzeMFT-based tool and hardened exception handling in its JSON output.}
-      \resumeItemListEnd
-
-    \resumeProject
-      {BoB - Used-Goods Fraud Prevention Platform}
-      {Sep. 2020 -- Dec. 2020 / Python, PHP. Built a used-goods fraud post detection and alert platform.}
-      \resumeItemListStart
-        \resumeItem{Owned listing collection from three marketplaces, the MySQL schema, and the ELK stack; set detection criteria from the patterns and price distribution of 101 listings the team confirmed as fraud, and extended the results into publications.}
-      \resumeItemListEnd
-
-    \resumeProject
-      {Beta Reader --- \textit{Windows Digital Forensics Complete Guide}}
-      {Sep. 2022 / by Seungmu Lee, BJ Public. Reviewed the manuscript and materials, and wrote an endorsement.}
-  \resumeSubHeadingListEnd
-
-%-----------AWARDS-----------------
-\section{Selected Awards}
-  \resumeSubHeadingListStart
-    \resumeAward{KISA President's Award}{3rd Cyber Attack \& Defense Scenario Competition for Cybersecurity Education \& Training (ATHENA 2026)}{Sep. 18, 2026}
-    \resumeAward{Honorable Mention(Korea Forensic Society President)}{8th--11th Digital Criminal Investigation Contest (four consecutive years)}{Dec. 15, 2022 / Dec. 18, 2023 / Dec. 17, 2024 / Dec. 16, 2025}
-    \resumeAward{Top Excellence Award(Financial Security Institute President)}{Financial Security Academy 2025}{Nov. 7, 2025}
-    \resumeAward{Excellence Award(Korea Housing Finance Corporation President)}{1st Yeongnam Cyber Attack Defense Competition, University Team Division}{Oct. 15, 2025}
-    \resumeAward{Excellence Award(KISA President)}{6th Honam Cybersecurity Conference Incident Response Competition 2025}{Sep. 18, 2025}
-    \resumeAward{Honorable Mention(KIISC Honam Branch Chair)}{5th Honam Cybersecurity Conference Intercollegiate Incident Response/Analysis Competition 2024}{Oct. 2, 2024}
-    \resumeAward{Top Excellence Award(ROK Air Force Chief of Staff)}{44th ROK Air Force Information and Communication Competition, Cyber Defense Track}{Oct. 26, 2022}
-    \resumeAward{Honorable Mention(KDFS President)}{KDFS Digital Forensics Challenge 2020}{Nov. 20, 2020}
-  \resumeSubHeadingListEnd
-
-%-----------TALKS AND PAPERS-----------------
-\section{Selected Talks and Publications}
-  \resumeSubHeadingListStart
-    \resumeTalk{A Proposal on the Need for Preventing Fraud Damage in Online Direct Transactions: Focused on Fraud Determination Factors}{KCI-indexed journal article, Korean Journal of Police Studies 21(1), pp.249--272, Mar. 2021, DOI: 10.22816/polsci.2021.21.1.009}
-      \resumeItemListStart
-        \resumeItem{Jangho Hyun, Dayeon Lim, Changyeob Lee, Jinwoo Lee, Hyunho Lee, Wonyoung Choi}
-      \resumeItemListEnd
-    \resumeTalk{Stellar-Agent: An AI Agent-Based Hybrid DevSecOps Policy Audit Framework Integrating IaC Rule Sets and Model Context Protocol (MCP)}{2025 Korean Association of Data Science Winter General Conference Proceedings, Dec. 18, 2025, Paper No. 0032, p.118}
-      \resumeItemListStart
-        \resumeItem{Junyoung Jung, Changyeob Lee, Jeongmin Lee, Yusik Lee}
-      \resumeItemListEnd
-    \resumeTalk{Proposal of a Used-Goods Fraud Prevention Platform}{Korea Institute of Information Security and Cryptology Winter Conference, 2020}
-      \resumeItemListStart
-        \resumeItem{Jangho Hyun, Hyunho Lee, Dayeon Lim, Jinwoo Lee, Changyeob Lee, Dongbin Oh, Wonyoung Choi}
-      \resumeItemListEnd
-    \resumeTalk{A Study on Domestic APT and Corporate Security Incidents}{Korea Institute of Information Security and Cryptology Winter Conference, 2019}
-      \resumeItemListStart
-        \resumeItem{Changyeob Lee, Jinwoo Lee, Junghoon Lee, Museung Noh, Hyunsang Park}
-      \resumeItemListEnd
-    \resumeTalk{Problems and Countermeasures of Payment Card Hacking}{Korea Institute of Information Security and Cryptology Winter Conference, 2018}
-      \resumeItemListStart
-        \resumeItem{Jinwoo Lee, Junghoon Lee, Changyeob Lee, Museung Noh, Hyunsoo Oh}
-      \resumeItemListEnd
-    \resumeTalk{A Study on RFID Skimming Attack Techniques}{Korea Institute of Information Security and Cryptology Winter Conference, 2017}
-      \resumeItemListStart
-        \resumeItem{Gunwoo Kim, Taehyun Kim, Yuwon Seong, Sangjun Yeo, Jinwoo Lee, Changyeob Lee, Dalwon Lee}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-%-----------SKILLS-----------------
-\section{Skills and Interests}
-  \resumeSubHeadingListStart
-    \resumeSkill{Digital Forensics \& Incident Response (DFIR)}{Windows forensics, Linux forensics, network forensics, timeline reconstruction, incident analysis}
-    \resumeSkill{Malware Analysis \& Detection Rules}{Static analysis, dynamic analysis, PE structure, YARA}
-    \resumeSkill{Security Operations}{Security monitoring, device management, policy and blocking rules, exercise response}
-    \resumeSkill{Engineering}{Python, Backend, DevSecOps, IaC, OpenStack}
-    \resumeSkill{Interests}{CTI, DevSecOps, Backend}
-    \resumeSkill{Languages}{Korean (Native), English (Intermediate), Japanese (Intermediate)}
-  \resumeSubHeadingListEnd
-
-%-----------CERTIFICATIONS-----------------
-\section{Certifications and Credentials}
-  \resumeSubHeadingListStart
-    \resumeItem{AWS Certified Solutions Architect - Associate (Jul. 26, 2023 -- Jul. 26, 2026, expired)}
-    \resumeItem{Digital Forensics Level 2, Korea (Dec. 22, 2022 -- Dec. 22, 2028)}
-    \resumeItem{Craftsman Information Equipment Operation (Issued Dec. 2022)}
-    \resumeItem{Exterro ACE / AccessData (Jan. 11, 2022 -- Jan. 11, 2024, expired)}
-    \resumeItem{Internet Information Manager Level 2 (Issued Oct. 2020)}
-    \resumeItem{Linux Master Level 2 (Issued Oct. 2019)}
-    \resumeItem{Network Manager Level 2 (Issued Dec. 2016 -- Valid until Dec. 13, 2031)}
-  \resumeSubHeadingListEnd
+\input{common/en/certs}
 
 \end{document}
